@@ -1,0 +1,15 @@
+employeeNumber,lastName,firstName,extension,email,officeCode,reportsTo,jobTitle,store_id,create_timestamp,update_timestamp
+1165,Jennings,Leslie,x3291,ljennings@classicmodelcars.com,1143,0,1,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1286,Tseng,Foon Yue,x2248,ftseng@classicmodelcars.com,1143,0,3,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1504,Jones,Barry,x102,bjones@classicmodelcars.com,1102,0,7,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1621,Nishi,Mami,x101,mnishi@classicmodelcars.com,1056,0,5,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1619,King,Tom,x103,tking@classicmodelcars.com,1088,0,6,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1401,Castillo,Pamela,x2759,pcastillo@classicmodelcars.com,1102,0,4,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1143,Bow,Anthony,x5428,abow@classicmodelcars.com,1056,0,1,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1611,Fixter,Andy,x101,afixter@classicmodelcars.com,1088,0,6,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1076,Firrelli,Jeff,x9273,jfirrelli@classicmodelcars.com,1002,0,1,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1702,Gerard,Martin,x2312,mgerard@classicmodelcars.com,1102,0,4,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1188,Firrelli,Julie,x2173,jfirrelli@classicmodelcars.com,1143,0,2,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1337,Bondur,Loui,x6493,lbondur@classicmodelcars.com,1102,0,4,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1501,Bott,Larry,x2311,lbott@classicmodelcars.com,1102,0,7,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
+1625,Kato,Yoshimi,x102,ykato@classicmodelcars.com,1621,0,5,NULL,2021-10-08 09:54:55,2021-10-08 09:54:55
