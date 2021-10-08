@@ -47,9 +47,9 @@ CREATE TABLE koteswara.Employees
    firstName         VARCHAR(50)                                             NOT NULL,
    extension         VARCHAR(10) CHARSET latin1 COLLATE latin1_swedish_ci    NOT NULL,
    email             VARCHAR(100) CHARSET latin1 COLLATE latin1_swedish_ci   NOT NULL,
-   officeCode        VARCHAR(10)                                             NOT NULL,
    reportsTo         INT,
    jobTitle          VARCHAR(50)                                             NOT NULL,
+   officeCode        VARCHAR(10)                                             NOT NULL,
    store_id          INT,
    create_timestamp  TIMESTAMP,
    update_timestamp  TIMESTAMP
@@ -104,7 +104,6 @@ CREATE TABLE koteswara.Orders
    status            VARCHAR(15) CHARSET latin1 COLLATE latin1_swedish_ci   NOT NULL,
    comments          TEXT CHARSET latin1 COLLATE latin1_swedish_ci,
    customerNumber    INT                                                    NOT NULL,
-   cancelledDate     DATE,
    store_id          INT,
    create_timestamp  TIMESTAMP,
    update_timestamp  TIMESTAMP
@@ -116,10 +115,10 @@ DROP TABLE IF EXISTS koteswara.Payments;
 
 CREATE TABLE koteswara.Payments
 (
-   customerNumber    INT             NOT NULL,
    checkNumber       VARCHAR(50)     NOT NULL,
    paymentDate       DATE            NOT NULL,
    amount            DECIMAL(10,2)   NOT NULL,
+   customerNumber    INT             NOT NULL,
    store_id          INT,
    create_timestamp  TIMESTAMP,
    update_timestamp  TIMESTAMP
@@ -148,13 +147,13 @@ CREATE TABLE koteswara.Products
 (
    productCode         VARCHAR(15)     NOT NULL,
    productName         VARCHAR(70)     NOT NULL,
-   productLine         VARCHAR(50)     NOT NULL,
    productScale        VARCHAR(10)     NOT NULL,
    productVendor       VARCHAR(50)     NOT NULL,
    productDescription  TEXT            NOT NULL,
    quantityInStock     SMALLINT        NOT NULL,
    buyPrice            DECIMAL(10,2)   NOT NULL,
    MSRP                DECIMAL(10,2)   NOT NULL,
+   productLine         VARCHAR(50)     NOT NULL,
    store_id            INT,
    create_timestamp    TIMESTAMP,
    update_timestamp    TIMESTAMP

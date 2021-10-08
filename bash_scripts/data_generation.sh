@@ -33,7 +33,7 @@ for TABLE in $TABLES
 do
         mysql -h $MYSQLh -u $MYSQLu -p$MYSQLp $MYSQLd -B -e "SELECT * FROM $TABLE;" > ~/Data/$TABLE.sh
         chmod 775 ~/Data/*
-        cat ~/Data/$TABLE.sh | sed 's/\t/,/g' | tail -n +2 > ~/Data/$TABLE.csm
+        cat ~/Data/$TABLE.sh | sed 's/,/ /g' | sed 's/\t/,/g' | tail -n +2 > ~/Data/$TABLE.csm
         cat ~/Data/$TABLE.csm > ~/Data/$TABLE.csv
         if [ "$TABLE" = Customers ] || [ "$TABLE" = Offices ]
         then
@@ -49,9 +49,8 @@ basename -s .csv  ./*.csv | xargs -n1 -i cp ./{}.csv ./{}-$STORES.csv
 TABLES='Customers Employees Products'
 for TABLE in $TABLES
 do
-        random=`shuf -n 1 -i 1-100`
+        random=`shuf -n 1 -i 10-100`
         ORECORDS=`wc -l < ~/Data/$TABLE.csv`     #original number of records
-        ((ORECORDS--))
         IRECORDS=$((ORECORDS * random))
         IRECORDS=$((IRECORDS / 100))                               #random number of records
         shuf -n $IRECORDS ~/Data/$TABLE.csv > ~/Data/$TABLE-$STORES.csv
@@ -67,7 +66,6 @@ MYSQLu=SaiKotesh
 MYSQLp=ChSa@0102
 MYSQLd=koteswara
 
-mysql -u $MYSQLu -p$MYSQLp -e 'SET GLOBAL local_infile=1;'
 TABLES='Customers Employees Orders Products OrderDetails ProductLines Offices Payments'
 
 for TABLE in $TABLES
@@ -85,8 +83,7 @@ do
 		INTO TABLE $MYSQLd.p$TABLE
 		FIELDS TERMINATED BY ','
 		OPTIONALLY ENCLOSED BY '"'
-		LINES TERMINATED BY '\n'
-		IGNORE 1 ROWS;
+		LINES TERMINATED BY '\n';
 
 		UPDATE $MYSQLd.p$TABLE
 		SET p$TABLE.update_timestamp = current_timestamp(),
@@ -98,136 +95,162 @@ QUERY
 done
 
 mysql -u $MYSQLu -p$MYSQLp <<QUERY
-USE $MYSQLd;
-CREATE TEMPORARY TABLE temp
-AS
-SELECT E.*
-FROM pEmployees E;
 
-INSERT INTO temp
+INSERT INTO $MYSQLd.pEmployees
+ 
+WITH temp AS (SELECT E.employeeNumber,
+E.lastName,
+E.firstName,
+E.extension,
+E.email,
+E.reportsTo,
+E.jobTitle,
+E.officeCode,
+101104 AS store_id,
+E.create_timestamp,
+E.update_timestamp
+			FROM $MYSQLd.pEmployees E
+			LEFT JOIN $MYSQLd.pEmployees E1 ON E.reportsTo = E1.employeeNumber
+			WHERE E1.employeeNumber IS NOT NULL
+			OR E.reportsTo IS NULL) 
 
-SELECT E.*
-FROM pEmployees E
-  LEFT JOIN pEmployees E1 ON E.reportsTo = E1.employeeNumber 
-WHERE E1.employeeNumber IS NOT NULL
-OR    E.reportsTo IS NULL ;
+SELECT DISTINCT t.* FROM temp t;
 
-TRUNCATE pEmployees;
-INSERT INTO pEmployees
+DELETE FROM $MYSQLd.pEmployees WHERE store_id IS NULL;
 
-SELECT *
-FROM temp;
-DROP TEMPORARY TABLE temp; 
+UPDATE $MYSQLd.pEmployees SET store_id = NULL;
 
-CREATE TEMPORARY TABLE temp
-AS
-SELECT O.*
-FROM pOffices O;
+INSERT INTO $MYSQLd.pOffices
 
-INSERT INTO temp
+WITH t AS (SELECT O.officeCode,
+O.city,
+O.phone,
+O.addressLine1,
+O.addressLine2,
+O.state,
+O.country,
+O.postalCode,
+O.territory,
+101104 AS store_id,
+O.create_timestamp,
+O.update_timestamp
+			FROM $MYSQLd.pOffices O
+			INNER JOIN $MYSQLd.pEmployees E ON O.officeCode = E.officeCode) 
 
-SELECT O.*
-FROM pOffices O
-  INNER JOIN pEmployees E ON O.officeCode = E.officeCode;
+SELECT DISTINCT * FROM t;
 
-TRUNCATE pOffices;
-INSERT INTO pOffices
+DELETE FROM $MYSQLd.pOffices WHERE store_id IS NULL;
 
-SELECT *
-FROM temp;
-DROP TEMPORARY TABLE temp; 
+UPDATE $MYSQLd.pOffices SET store_id = NULL;
 
-CREATE TEMPORARY TABLE temp
-AS
-SELECT C.*
-FROM pCustomers C;
+INSERT INTO $MYSQLd.pCustomers
+ 
+WITH t AS (SELECT C.customerNumber, 
+C.customerName, 
+C.contactLastName, 
+C.contactFirstName, 
+C.phone,
+C.addressLine1,
+C.addressLine2,
+C.city,
+C.state,
+C.postalCode,
+C.country,
+C.salesRepEmployeeNumber,
+C.creditLimit,
+101104 AS store_id,
+C.create_timestamp,
+C.update_timestamp
+			FROM $MYSQLd.pCustomers C
+			LEFT JOIN $MYSQLd.pEmployees E ON C.salesRepEmployeeNumber = E.employeeNumber
+			WHERE E.employeeNumber IS NOT NULL
+			OR C.salesRepEmployeeNumber IS NULL) 
 
-INSERT  INTO temp
+SELECT DISTINCT t.* FROM t;
 
-SELECT C.*
-FROM pEmployees E
-  LEFT JOIN pCustomers C ON C.salesRepEmployeeNumber = E.employeeNumber  
-  WHERE E.employeeNumber IS NOT NULL;
+DELETE FROM $MYSQLd.pCustomers WHERE store_id IS NULL;
 
-TRUNCATE pCustomers;
-INSERT  INTO pCustomers
+UPDATE $MYSQLd.pCustomers SET store_id = NULL;
 
-SELECT *
-FROM temp;
-DROP TEMPORARY TABLE temp; 
+INSERT INTO $MYSQLd.pPayments
+ 
+WITH t AS (SELECT P.checkNumber,
+P.paymentDate,
+P.amount,
+P.customerNumber,
+101104 AS store_id,
+P.create_timestamp,
+P.update_timestamp
+			FROM $MYSQLd.pPayments P
+			INNER JOIN $MYSQLd.pCustomers C ON P.customerNumber = C.customerNumber
+			) 
 
-CREATE TEMPORARY TABLE temp
-AS
-SELECT P.*
-FROM pPayments P;
+SELECT DISTINCT t.* FROM t;
 
-INSERT  INTO temp
+DELETE FROM $MYSQLd.pPayments WHERE store_id IS NULL;
 
-SELECT P.*
-FROM pPayments P
-  INNER JOIN pCustomers C ON P.customerNumber = C.customerNumber;
+UPDATE $MYSQLd.pPayments SET store_id = NULL;
 
-TRUNCATE pPayments;
-INSERT  INTO pPayments
+INSERT INTO $MYSQLd.pOrders
+ 
+WITH t AS (SELECT O.orderNumber,
+O.orderDate,
+O.requiredDate,
+O.shippedDate,
+O.status,
+O.comments,
+O.customerNumber,
+101104 AS store_id,
+O.create_timestamp,
+O.update_timestamp
+			FROM $MYSQLd.pOrders O
+			INNER JOIN $MYSQLd.pCustomers C ON O.customerNumber = C.customerNumber
+			) 
 
-SELECT *
-FROM temp;
-DROP TEMPORARY TABLE temp; 
+SELECT DISTINCT t.* FROM t;
 
-CREATE TEMPORARY TABLE temp
-AS
-SELECT O.*
-FROM pOrders O;
+DELETE FROM $MYSQLd.pOrders WHERE store_id IS NULL;
 
-INSERT  INTO temp
+UPDATE $MYSQLd.pOrders SET store_id = NULL;
 
-SELECT O.*
-FROM pOrders O
-  INNER JOIN pCustomers C ON O.customerNumber = C.customerNumber  ;
+INSERT INTO $MYSQLd.pOrderDetails
 
-TRUNCATE pOrders;
-INSERT  INTO pOrders
+WITH t AS (SELECT OD.orderNumber,
+OD.productCode,
+OD.quantityOrdered,
+OD.priceEach,
+OD.orderLineNumber,
+101104 AS store_id,
+OD.create_timestamp,
+OD.update_timestamp
+			FROM $MYSQLd.pOrders O
+			INNER JOIN $MYSQLd.pOrderDetails OD ON O.orderNumber = OD.orderNumber
+			INNER JOIN $MYSQLd.pProducts P ON OD.productCode = P.productCode) 
 
-SELECT *
-FROM temp;
-DROP TEMPORARY TABLE temp; 
+SELECT DISTINCT t.* FROM t;
 
-CREATE TEMPORARY TABLE temp
-AS
-SELECT OD.*
-FROM pOrderDetails OD;
+DELETE FROM $MYSQLd.pOrderDetails WHERE store_id IS NULL;
 
-INSERT  INTO temp
+UPDATE $MYSQLd.pOrderDetails SET store_id = NULL;
 
-SELECT OD.*
-FROM pOrders O
-  INNER JOIN pOrderDetails OD ON O.orderNumber = OD.orderNumber 
-  INNER JOIN pProducts P ON OD.productCode = P.productCode  ;
+INSERT INTO $MYSQLd.pProductLines
+ 
+WITH t AS (SELECT PL.productLine,
+PL.textDescription,
+PL.htmlDescription,
+PL.image,
+101104 AS store_id,
+PL.create_timestamp,
+PL.update_timestamp
+			FROM $MYSQLd.pProductLines PL
+			INNER JOIN $MYSQLd.pProducts P ON PL.productLine = P.productLine
+			) 
 
-TRUNCATE pOrderDetails;
-INSERT  INTO pOrderDetails
+SELECT DISTINCT t.* FROM t;
 
-SELECT *
-FROM temp;
-DROP TEMPORARY TABLE temp; 
+DELETE FROM $MYSQLd.pProductLines WHERE store_id IS NULL;
 
-CREATE TEMPORARY TABLE temp
-AS
-SELECT PL.*
-FROM pProductLines PL;
-
-INSERT  INTO temp
-
-SELECT PL.*
-FROM pProducts PD
-  INNER JOIN pProductLines PL ON PD.productLine = PL.productLine  ;
-
-TRUNCATE pProductLines;
-INSERT  INTO pProductLines
-
-SELECT *
-FROM temp;
-DROP TEMPORARY TABLE temp; 
+UPDATE $MYSQLd.pProductLines SET store_id = NULL;
 
 QUERY
 for TABLE in $TABLES	
@@ -235,7 +258,7 @@ do
 	mysql -u $MYSQLu -p$MYSQLp -B -e "SELECT * FROM $MYSQLd.p$TABLE;" > ~/Source/$TABLE-$STORES.sh
 	cat ~/Source/$TABLE-$STORES.sh | sed 's/\t/,/g' > ~/Source/$TABLE-$STORES.csv
 	rm ~/Source/$TABLE-$STORES.sh
-	#mysql -u $MYSQLu -p$MYSQLp -e "DROP TABLE $MYSQLd.p$TABLE;"
+	mysql -u $MYSQLu -p$MYSQLp -e "DROP TABLE $MYSQLd.p$TABLE;"
 done
 
 rm -r ~/Data/

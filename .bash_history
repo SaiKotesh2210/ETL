@@ -760,3 +760,224 @@ rm Customers.csv Offices.csv
 vi bash_scripts/data_generation_1.sh 
 ls
 ls -l bash_scripts/
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 5
+ls
+ls -l Source/
+cat Source/
+ls Data/
+cd Source/
+cat Customers-5.csv 
+cd ..
+rm -r Data/
+ls
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 5
+ls Source/
+ls -l Source/
+cat Source/Customers-5.csv 
+vi bash_scripts/data_generation.sh 
+ls
+ls -l Data/
+./bash_scripts/data_generation.sh 7
+ls -l Data/
+./bash_scripts/data_generation.sh 5
+ls -l Data/
+ls -l Source/
+clear
+ls
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+ls
+rm -r Processing/
+ls
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+ls
+ls -l Data/
+ls -l Source/
+vi bash_scripts/data_generation_1.sh 
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+cd bash_scripts/
+rm data_generation_1.sh 
+ls
+cd ..
+clear
+ls
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+vi bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+clear
+timedate ctl
+timedatectl
+timedatectl list-timezones
+sudo timedatectl set-timezone Asia/Kolkata
+timedatectl
+clear
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 6
+ls
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 6
+ls -l Source/
+vi bash_scripts/data_generation.sh 
+rm -r Source/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+git add -A
+git commit -m "Second Commit"
+git push -u origin master
+clear
+cat Source/Customers-5.csv 
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 5
+clear
+ls
+cd Data/
+ls
+cat Customers.sh
+clear
+cat Customers.csm
+clear
+cat Customers.sh
+cd ..
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+rm -r Data/ Source/
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+cat Data/Customers.csm
+vi bash_scripts/data_generation.sh 
+cleae
+clear
+cat Data/Customers.csm
+cat Data/Customers.csv
+cat Data/Customers-5.csv 
+clear
+cat Source/Customers-5.csv 
+cat Source/Orders-5.csv | sort
+cat Data/Orders-5.csv | sort
+cat Data/Orders-5.csv | wc -l
+cat Source/Orders-5.csv | wc -l
+vi bash_scripts/data_generation.sh 
+cat Source/Employees-5.csv | sort
+cat Data/Employees-5.csv | sort
+cat Data/Employees.sh
+vi bash_scripts/table_creation.sh 
+./bash_scripts/table_creation.sh 
+clear
+rm -r Data/ Source/
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+ls
+vi bash_scripts/table_creation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+ls
+vi bash_scripts/data_generation.sh 
+ls -l Source/
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+ls -l Source/
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+rm -r Data/ Source/
+./bash_scripts/data_generation.sh  5
+ls -l Source/
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+vi bash_scripts/table_creation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 5
+clear
+vi bash_scripts/data_generation.sh 
+cat Data/Orders-5.csv | wc -l
+cat Data/Customers-5.csv | wc -l
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 5
+vi ./bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+rm -r Data/ Source/
+./bash_scripts/data_generation.sh 5
+vi bash_scripts/data_generation.sh 
+vi bash_scripts/table_creation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 5
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 5
+cat Data/Offices.csv
+cat Data/Offices.csm
+cat Data/Offices-5.csv
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+rm -r Data/ Source/
+ls 
+clear
+./bash_scripts/data_generation.sh 7
+vi bash_scripts/table_creation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 125
+cat Source/Employees-125.csv | wc -l
+clear
+rm -r Data/ Source/
+ls
+vi bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 8
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+ls
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 8
+vi bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 8
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 8
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+vi bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 9
+ls
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
