@@ -1,23 +1,3 @@
-ls -al
-mkdir bash_scripts
-ls
-cd bash_scripts
-vi transfer.sh
-cat transfer.sh
-./transfer.sh
-sudo ./transfer.sh
-sudo systemctl status mysqld
-vi transfer.sh
-which bash
-echo $SHELL
-mysql -u SaiKotesh -pChSa@0102
-vi transfer.sh
-./transfer.sh
-ls -al
-chmod 777 transfer.sh
-sudo ./transfer.sh
-vi transfer.sh
-sudo ./transfer.sh
 vi transfer.sh
 ./transfer.sh
 vi transfer.sh
@@ -981,3 +961,40 @@ vi bash_scripts/data_generation.sh
 ls
 rm -r Data/ Source/
 ./bash_scripts/table_creation.sh 
+df
+./bash_scripts/table_creation.sh 
+vi ./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 11
+vi ./bash_scripts/data_generation.sh 
+ls
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 11
+vi ./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 11
+rm -r Data/ Source/
+clear
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 17
+vi ./bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+
+./bash_scripts/data_generation.sh 27
+vi ./bash_scripts/data_generation.sh 
+rm -r Data/ Source/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 
+./bash_scripts/data_generation.sh 97
+clear
+vi ./bash_scripts/data_generation.sh 
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 11
+vi bash_scripts/data_generation.sh 
+vi bash_scripts/table_creation.sh 
+git add -A
+git commit -m "Data Generation"
+git push -u origin master
+cat Source/Customers-11.csv 
+vi bash_scripts/data_generation.sh 
+exit 
