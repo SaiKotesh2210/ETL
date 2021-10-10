@@ -1,11 +1,3 @@
-vi transfer.sh
-./transfer.sh
-vi transfer.sh
-./transfer.sh
-exit
-ls
-cat bash_scripts/transfer.sh 
-EXIT
 exit
 vi bash_scripts/transfer.sh 
 exit
@@ -998,3 +990,11 @@ git push -u origin master
 cat Source/Customers-11.csv 
 vi bash_scripts/data_generation.sh 
 exit 
+git status
+git add -A
+git commit -m "History"
+git push -u origin master
+git pull
+git add -A
+git commit -m "History"
+git push -u origin master

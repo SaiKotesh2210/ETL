@@ -1,3 +1,0 @@
-employeeNumber,lastName,firstName,extension,email,reportsTo,jobTitle,officeCode,store_id,create_timestamp,update_timestamp
-1002,Murphy,Diane,x5800,dmurphy@classicmodelcars.com,NULL,President,1,NULL,2021-10-08 15:47:41,2021-10-08 15:47:41
-1337,Bondur,Loui,x6493,lbondur@classicmodelcars.com,1102,Sales Rep,4,NULL,2021-10-08 15:47:41,2021-10-08 15:47:41
