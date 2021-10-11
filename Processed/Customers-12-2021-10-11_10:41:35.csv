@@ -1,0 +1,39 @@
+customerNumber,customerName,contactLastName,contactFirstName,phone,addressLine1,addressLine2,city,state,postalCode,country,salesRepEmployeeNumber,creditLimit,store_id,create_timestamp,update_timestamp
+459,Warburg Exchange,Ottlieb,Sven ,0241-039123,Walserweg 21,NULL,Aachen,NULL,52066,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+131,Land of Toys Inc.,Lee,Kwai,2125557818,897 Long Airport Avenue,NULL,NYC,NY,10022,USA,1323,114900.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+204,Online Mini Collectables,Barajas,Miguel,6175557555,7635 Spinnaker Dr.,NULL,Brickhaven,MA,58339,USA,1188,68700.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+319,Mini Classics,Frick,Steve,9145554562,3758 North Pendale Street,NULL,White Plains,NY,24067,USA,1323,102700.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+447,Gift Ideas Corp.,Lewis,Dan,2035554407,2440 Pompton St.,NULL,Glendale,CT,97561,USA,1323,49700.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+129,Mini Wheels Co.,Murphy,Julie,6505555787,5557 North Pendale Street,NULL,San Francisco,CA,94217,USA,1165,64600.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+369,Lisboa Souveniers  Inc,Rodriguez,Lino ,(1) 354-2555,Jardim das rosas n. 32,NULL,Lisboa,NULL,1675,Portugal,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+161,Technics Stores Inc.,Hashimoto,Juri,6505556809,9408 Furth Circle,NULL,Burlingame,CA,94217,USA,1165,84600.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+462,FunGiftIdeas.com,Benitez,Violeta,5085552555,1785 First Street,NULL,New Bedford,MA,50553,USA,1216,85800.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+465,Anton Designs  Ltd.,Anton,Carmen,+34 913 728555,c/ Gobelas  19-1 Urb. La Florida,NULL,Madrid,NULL,28023,Spain,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+273,Franken Gifts  Co,Franken,Peter ,089-0877555,Berliner Platz 43,NULL,Manheim,NULL,80805,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+443,Feuer Online Stores  Inc,Feuer,Alexander ,0342-555176,Heerstr. 22,NULL,Leipzig,NULL,04179,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+286,Marta's Replicas Co.,Hernandez,Marta,6175558555,39323 Spinnaker Dr.,NULL,Cambridge,MA,51247,USA,1216,123700.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+124,Mini Gifts Distributors Ltd.,Nelson,Susan,4155551450,5677 Strong St.,NULL,San Rafael,CA,97562,USA,1165,210500.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+237,ANG Resellers,Camino,Alejandra ,(91) 745 6555,Gran V,NULL,Madrid,NULL,28001,Spain,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+169,Porto Imports Co.,de Castro,Isabel ,(1) 356-5555,Estrada da sa,NULL,Lisboa,NULL,1756,Portugal,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+339,Classic Gift Ideas  Inc,Cervantes,Francisca,2155554695,782 First Street,NULL,Philadelphia,PA,71270,USA,1188,81100.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+307,Der Hund Imports,Andersen,Mel,030-0074555,Obere Str. 57,NULL,Berlin,NULL,12209,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+450,The Sharp Gifts Warehouse,Frick,Sue,4085553659,3086 Ingle Ln.,NULL,San Jose,CA,94217,USA,1165,77600.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+480,Kremlin Collectables  Co.,Semenov,Alexander ,+7 812 293 0521,2 Pobedy Square,NULL,Saint Petersburg,NULL,196143,Russia,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+356,SAR Distributors  Co,Kuger,Armand,+27 21 550 3555,1250 Pretorius Street,NULL,Hatfield,Pretoria,0028,South Africa,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+481,Raanan Stores  Inc,Altagar G M,Raanan,+ 972 9 959 8555,3 Hagalim Blv.,NULL,Herzlia,NULL,47625,Israel,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+125,Havel & Zbyszek Co,Piestrzeniewicz,Zbyszek ,(26) 642-7555,ul. Filtrowa 68,NULL,Warszawa,NULL,01-012,Poland,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+477,Mit Vergn,Moos,Hanna ,0621-08555,Forsterstr. 57,NULL,Mannheim,NULL,68306,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+303,Schuyler Imports,Schuyler,Bradley,+31 20 491 9555,Kingsfordweg 151,NULL,Amsterdam,NULL,1043 GR,Netherlands,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+361,Kommission Auto,Josephs,Karin,0251-555259,Luisenstr. 48,NULL,Passau,NULL,44087,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+348,Asian Treasures  Inc.,McKenna,Patricia ,2967 555,8 Johnstown Road,NULL,Cork,Co. Cork,NULL,Ireland,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+157,Diecast Classics Inc.,Leong,Kelvin,2155551555,7586 Pompton St.,NULL,Allentown,PA,70267,USA,1216,100600.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+335,Cramer Spezialit,Cramer,Philip ,0555-09555,Maubelstr. 90,NULL,Brandenburg,NULL,14776,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+487,Signal Collectibles Ltd.,Taylor,Sue,4155554312,2793 Furth Circle,NULL,Brisbane,CA,94217,USA,1165,60300.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+223,Nat,Kloss,Horst ,0372-555188,Taucherstra,NULL,Cunewalde,NULL,01307,Germany,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+320,Mini Creations Ltd.,Huang,Wing,5085559555,4575 Hillside Dr.,NULL,New Bedford,MA,50553,USA,1188,94500.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+379,Collectables For Less Inc.,Nelson,Allen,6175558555,7825 Douglas Av.,NULL,Brickhaven,MA,58339,USA,1188,70700.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+362,Gifts4AllAges.com,Yoshido,Juri,6175559555,8616 Spinnaker Dr.,NULL,Boston,MA,51003,USA,1216,41900.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+173,Cambridge Collectables Co.,Tseng,Jerry,6175555555,4658 Baden Av.,NULL,Cambridge,MA,51247,USA,1188,43400.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+198,Auto-Moto Classics Inc.,Taylor,Leslie,6175558428,16780 Pompton St.,NULL,Brickhaven,MA,58339,USA,1216,23000.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+260,Royal Canadian Collectables  Ltd.,Lincoln,Elizabeth ,(604) 555-4555,23 Tsawwassen Blvd.,NULL,Tsawwassen,BC,T2F 8M4,Canada,1323,89600.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+206,Asian Shopping Network  Co,Walker,Brydey,+612 9411 1555,Suntec Tower Three,8 Temasek,Singapore,NULL,038988,Singapore,NULL,0.00,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45

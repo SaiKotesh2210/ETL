@@ -17,6 +17,20 @@ then
         exit
 fi
 
+if [ "$2" = 1 ]
+then
+        tables='Employees'
+elif [ "$2" = 3 ] || [ -z "$2" ]
+then
+        tables='Customers Employees Products'
+elif [ "$2" = 5 ]
+then
+        tables='Customers Employees Products Offices Productlines'
+else
+        echo 'Enter 1 or 3 or 5 for those number of fact tables to be randomized'
+        exit
+fi
+
 if [ ! -d ~/Data ]
 then
     mkdir ~/Data/
@@ -46,8 +60,7 @@ done
 
 cd ~/Data/
 basename -s .csv  ./*.csv | xargs -n1 -i cp ./{}.csv ./{}-$STORES.csv
-TABLES='Customers Employees Products'
-for TABLE in $TABLES
+for TABLE in $tables
 do
         random=`shuf -n 1 -i 10-100`
         ORECORDS=`wc -l < ~/Data/$TABLE.csv`     #original number of records
@@ -73,7 +86,9 @@ do
 
 	mysql -u $MYSQLu -p$MYSQLp <<QUERY
 
-	 SET GLOBAL SQL_MODE='';
+	 	SET GLOBAL SQL_MODE='';
+
+	 	SET GLOBAL LOCAL_INFILE=1;
 
 		CREATE TABLE IF NOT EXISTS $MYSQLd.p$TABLE AS
 		SELECT *
@@ -262,5 +277,9 @@ do
 	rm ~/Source/$TABLE-$STORES.sh
 	mysql -u $MYSQLu -p$MYSQLp -e "DROP TABLE $MYSQLd.p$TABLE;"
 done
+
+DATE=`date +"%d-%m-%Y %T"`
+echo $DATE,$1,Data_generation > ~/bash_scripts/history.log
+tr "," "\t" < ~/bash_scripts/history.log >> ~/bash_scripts/batch.log
 
 rm -r ~/Data/

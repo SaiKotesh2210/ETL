@@ -1,8 +1,0 @@
-employeeNumber,lastName,firstName,extension,email,reportsTo,jobTitle,officeCode,store_id,create_timestamp,update_timestamp
-1188,Firrelli,Julie,x2173,jfirrelli@classicmodelcars.com,1143,Sales Rep,2,NULL,2021-10-10 10:47:42,2021-10-10 10:47:42
-1165,Jennings,Leslie,x3291,ljennings@classicmodelcars.com,1143,Sales Rep,1,NULL,2021-10-10 10:47:42,2021-10-10 10:47:42
-1056,Patterson,Mary,x4611,mpatterso@classicmodelcars.com,1002,VP Sales,1,NULL,2021-10-10 10:47:42,2021-10-10 10:47:42
-1216,Patterson,Steve,x4334,spatterson@classicmodelcars.com,1143,Sales Rep,2,NULL,2021-10-10 10:47:42,2021-10-10 10:47:42
-1002,Murphy,Diane,x5800,dmurphy@classicmodelcars.com,NULL,President,1,NULL,2021-10-10 10:47:42,2021-10-10 10:47:42
-1143,Bow,Anthony,x5428,abow@classicmodelcars.com,1056,Sales Manager (NA),1,NULL,2021-10-10 10:47:42,2021-10-10 10:47:42
-1286,Tseng,Foon Yue,x2248,ftseng@classicmodelcars.com,1143,Sales Rep,3,NULL,2021-10-10 10:47:42,2021-10-10 10:47:42

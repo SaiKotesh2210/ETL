@@ -1,79 +1,3 @@
-exit
-vi bash_scripts/transfer.sh 
-exit
-pwd
-mkdir data
-chmod 777 data
-ls -al
-cd ..
-ls -al
-exit
-ls
-ls -al
-exit
-cd ..
-ls -al
-chmod 777 SaiKotesh/
-ls -al
-exit
-ls
-rm -r data
-ls
-cd CM_20050610
-ls
-cat Customers.csv 
-exit
-history
-mysql -u SaiKotesh -pChSa@0102
-ls
-vi bash_scripts/t
-cd bash_scripts/
-ls
-vi transfer.sh 
-pwd
-./transfer.sh 
-cd ..
-ls
-rm -r CM_20050609
-ls
-rm -r CM_20050610
-rm -r CM_20050611
-rm -r CM_20050612
-rm -r CM_20050613
-rm -r CM_20050614
-ls
-exit
-ls
-exit
-ls
-pwd
-ls -al
-cd ..
-ls -al
-exit
-ls
-cd ..
-ls
-ls -al
-exit
-ls
-vi bash_scripts/transfer.sh 
-SET GLOBAL LOCAL_INFILE = 1
-mysql -u SaiKotesh -p ChSa@0102
-mysql -u SaiKotesh -p
-exit
-ls
-vi bash_scripts/transfer.sh 
-exit
-ls
-cd Data
-ls
-cd CM_20050609
-ls
-awk 'int(100*rand())%5<1' customers.csv
-cat customers.csv
-awk 'int(100*rand())%5<1' customers.csv > data.txt
-ls
 cat data.txt
 wc data.txt
 wc -l data.txt
@@ -998,3 +922,79 @@ git pull
 git add -A
 git commit -m "History"
 git push -u origin master
+ls
+rm -r Source/
+ls
+ls bash_scripts/
+sudo yum update
+sudo yum upgrade
+vi bash_scripts/consumption.sh
+vi bash_scripts/data_generation.sh 
+./bash_scripts/consumption.sh
+chmod 755 bash_scripts/consumption.sh 
+./bash_scripts/consumption.sh
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 7
+./bash_scripts/consumption.sh
+vi bash_scripts/consumption.sh 
+ls
+rm -r Source/ Processed/ Processing/
+ls
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 7
+./bash_scripts/consumption.sh
+vi bash_scripts/consumption.sh 
+ls
+rm -r Source/ Processed/ Processing/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 7
+./bash_scripts/consumption.sh
+vi bash_scripts/consumption.sh 
+ls
+rm -r Source/ Processed/ Processing/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 7
+./bash_scripts/consumption.sh
+clear
+vi bash_scripts/consumption.sh 
+rm -r Source/ Processed/ Processing/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 4
+./bash_scripts/consumption.sh
+git add -A
+git commit -m "Consumption Script Added"
+git push -u origin master
+vi bash_scripts/consumption.sh 
+rm -r Source/ Processed/ Processing/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 4
+./bash_scripts/consumption.sh
+vi bash_scripts/consumption.sh 
+rm -r Source/ Processed/ Processing/
+./bash_scripts/table_creation.sh 
+vi bash_scripts/consumption.sh 
+./bash_scripts/consumption.sh
+vi bash_scripts/consumption.sh 
+rm -r Source/ Processed/ Processing/
+ls
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 4
+./bash_scripts/consumption.sh 
+vi ./bash_scripts/consumption.sh 
+rm -r Source/ Processed/ Processing/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 4
+./bash_scripts/consumption.sh 
+vi ./bash_scripts/consumption.sh 
+rm -r Source/ Processed/ Processing/
+./bash_scripts/table_creation.sh 
+./bash_scripts/data_generation.sh 4
+./bash_scripts/consumption.sh 
+vi ./bash_scripts/consumption.sh 
+rm -r Source/ Processed/ Processing/
+./bash_scripts/data_generation.sh 4
+./bash_scripts/consumption.sh 
+vi ./bash_scripts/consumption.sh 
+clear exit
+clear
+exit

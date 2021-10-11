@@ -1,0 +1,4 @@
+employeeNumber,lastName,firstName,extension,email,reportsTo,jobTitle,officeCode,store_id,create_timestamp,update_timestamp
+1370,Hernandez,Gerard,x2028,ghernande@classicmodelcars.com,1102,Sales Rep,4,NULL,2021-10-11 10:38:49,2021-10-11 10:38:49
+1002,Murphy,Diane,x5800,dmurphy@classicmodelcars.com,NULL,President,1,NULL,2021-10-11 10:38:49,2021-10-11 10:38:49
+1076,Firrelli,Jeff,x9273,jfirrelli@classicmodelcars.com,1002,VP Marketing,1,NULL,2021-10-11 10:38:49,2021-10-11 10:38:49

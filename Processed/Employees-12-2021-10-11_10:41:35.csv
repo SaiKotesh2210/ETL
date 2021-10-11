@@ -1,0 +1,5 @@
+employeeNumber,lastName,firstName,extension,email,reportsTo,jobTitle,officeCode,store_id,create_timestamp,update_timestamp
+1165,Jennings,Leslie,x3291,ljennings@classicmodelcars.com,1143,Sales Rep,1,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+1216,Patterson,Steve,x4334,spatterson@classicmodelcars.com,1143,Sales Rep,2,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+1323,Vanauf,George,x4102,gvanauf@classicmodelcars.com,1143,Sales Rep,3,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
+1188,Firrelli,Julie,x2173,jfirrelli@classicmodelcars.com,1143,Sales Rep,2,NULL,2021-10-11 10:40:45,2021-10-11 10:40:45
